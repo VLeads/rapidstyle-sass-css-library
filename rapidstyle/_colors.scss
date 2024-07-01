@@ -1,0 +1,58 @@
+@each $key, $val in $colors {
+
+    //loop in colors with key, value pairs (saas each method)
+    .text-#{$key} {
+        //to assign key to selector, use '#' also
+        color: $val;
+    }
+
+    .text-hover-#{$key} {
+        &:hover {
+            color: $val;
+        }
+    }
+
+    .bg-#{$key} {
+        background-color: $val;
+    }
+
+    @if($val !=black and $val !=white) {
+
+        // light variations
+        @for $i from 1 through 9 {
+
+            //loop from index 1 through 9 (for loop)
+            .text-#{$key}-light-#{$i} {
+                color: mix(white, $val, $i * 10%);
+                // to make a lighter variation, mix white color with given color, with percentage of white into it, eg. for loop 1, mixing color with 10% of white ie. (1*10 = 10)
+            }
+
+            .text-hover-#{$key}-light-#{$i} {
+                &:hover {
+                    color: mix(white, $val, $i * 10%);
+                }
+            }
+
+            .bg-#{$key}-light-#{$i} {
+                background-color: mix(white, $val, $i * 10%);
+            }
+        }
+
+        // dark variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(black, $val, $i * 10%); //for darker variations mixing black color with given color
+            }
+
+            .text-hover-#{$key}-dark-#{$i} {
+                &:hover {
+                    color: mix(black, $val, $i * 10%);
+                }
+            }
+
+            .bg-#{$key}-dark-#{$i} {
+                background-color: mix(black, $val, $i * 10%);
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+// math function of sass
+@use 'sass:math';
+
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);   //divide by 4
+
+    .card-title {
+        font-size: $base-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// @debug "hi rapidstyle"  //use @debug to console output in terminal (for debugging purposes)
