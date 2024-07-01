@@ -1,5 +1,8 @@
 @use 'sass:math';
 
+/** here I have created maps in scss, left side name is just variable name, *map holds key, value pairs
+*it is denoted with parentheses "()"
+*/
 $utilities: (
   "padding": (
     "prefix": "p",
