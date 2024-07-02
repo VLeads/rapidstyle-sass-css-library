@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- we have to add path to compiled css, SCSS directly used will not work here -->
     <link rel="stylesheet" href="/css/index.css" />
     <title>SASS Learning</title>
   </head>
   <body>
+    <nav class="navbar-primary text-white mb-4">
+      <div class="container">
+        <h2 class="site-title">RapidStyle</h2>
+        <p>A lightweight & fast CSS library</p>
+      </div>
+    </nav>
     <div class="container">
       <!-- colors -->
       <h2>Colors</h2>
@@ -97,10 +104,10 @@
       <!-- grid system -->
       <h2 class="mb-2">Grid System</h2>
 
-      <div class="row">
+      <div class="row gap-2 justify-center">
         <div class="col-12-xs col-5-sm col-3-xl">
           <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
+            <h3 class="card-title">Hello, Rapidstyle</h3>
             <p class="card-body">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>

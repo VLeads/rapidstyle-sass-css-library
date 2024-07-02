@@ -1,0 +1,26 @@
+%flex-layout {   //'%' means 'placeholder' that this is not going to compiled in the final css, because we are not using flex-layout class in our html
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    @extend %flex-layout; //@extend means, it will apply all of the properties from that selector ('flex-layout') here as well
+    padding: $base-padding $base-padding * 2;
+    box-shadow: $base-box-shadow;
+    .site-title {
+      font-size: $font-size-lg;
+    }
+    .container {
+      @extend %flex-layout;
+    }
+  }
+  
+  @each $key, $val in $colors {
+    .navbar-#{$key} {
+      @extend .navbar; //@extend means, we're using all navbar selector properties here as well
+      background-color: $val;
+    }
+  }
