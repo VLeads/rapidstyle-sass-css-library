@@ -17,7 +17,7 @@
         @include btn($val);
 
         &:hover {
-            background-color: lighten($val, 5); //lighten function to lighten color by 5 (maybe 5%)
+            background-color: lighten($val, 5); //lighten function to lighten color by 5%
         }
     }
 
