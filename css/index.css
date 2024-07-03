@@ -3930,3 +3930,7 @@ img {
 .font-xxl {
   font-size: 3rem;
 }
+
+html, body {
+  scroll-behavior: smooth;
+}
